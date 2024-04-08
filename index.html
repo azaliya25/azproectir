@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>DICENTRA</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/logo/logo_dicentra.svg" type="image/x-icon">
+</head>
+
+<body>
+
+    <a href="#">
+        <div class="to_up"></div>
+    </a>
+
+    <header class="container">
+        <a href="./index.html"><img src="assets/img/logo/logo_dicentra.svg" alt="DICENTRA"></a>
+
+        <nav>
+            <a href="#glav">Главная</a>
+            <a href="#about_us">О нас</a>
+            <a href="#catalog">Каталог</a>
+        </nav>
+
+        <div class="icons">
+            <a href="pages/admin/users.html"><i class="fa-regular fa-heart" style="color: #29231d;"></i></a>
+            <img src="assets/img/icons/basket.svg" alt="корзина">
+            <a href="pages/authorization.html"><i class="fa-regular fa-user" style="color: #29231d;"></i></a>
+        </div>
+        <i id="burger-icon" class="fa-solid fa-bars menu" style="color: #29231d;"></i>
+        <div id="burger-menu" class="burger-menu">
+            <div>
+                <p class="burger-title">меню</p>
+                <nav class="burger-menu-nav">
+                    <a href="#glav">Главная</a>
+                    <a href="#about_us">О нас</a>
+                    <a href="#catalog">Каталог</a>
+                    <div class="burger-ico">
+                        <a href="pages/admin/users.html"><i class="fa-regular fa-heart" style="color: #29231d;"></i></a>
+                        <img src="assets/img/icons/basket.svg" alt="корзина">
+                        <a href="pages/authorization.html"><i class="fa-regular fa-user" style="color: #29231d;"></i></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const burgerIcon = document.getElementById('burger-icon');
+        const burgerMenu = document.getElementById('burger-menu');
+
+        burgerIcon.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+        });
+
+        // Close burger menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!burgerMenu.contains(event.target) && event.target !== burgerIcon) {
+                burgerMenu.classList.remove('active');
+            }
+        });
+    </script>
+    </header>
+
+    <div class="banner" id="glav">
+        <div class="heading container">
+            <h1>Только лучшие<br>букеты!</h1>
+            <p>Круглосуточная доставка любви</p>
+            <button>выбрать букет</button>
+        </div>
+    </div>
+
+
+    <div class="about_us container" id="about_us">
+
+        <div class="about_us__backgraund container">
+            <div class="about_us__content">
+                <p class="about_us__subtitle">Мы сотворили Dicentra для того, чтоб вам больше не доводилось думать, как
+                    именно лучше выразить свои чувства.
+                </p>
+
+                <div class="about_us__block">
+
+                    <div class="about_us__text">
+                        <div class="about_us__service">
+                            <img src="assets/img/about_us/about_us1.svg" alt="о нас">
+                            <div class="about_us_info">
+                                <h4>Сервис с первой секунды</h4>
+                                <p>Мы скрупулезно контролируем все этапы взаимодействия с нашими клиентами, от момента
+                                    оформления
+                                    заказа
+                                    до его полного выполнения.</p>
+                            </div>
+                        </div>
+                        <div class="about_us__assortment">
+                            <img src="assets/img/about_us/about_us2.svg" alt="о нас">
+                            <div class="about_us_info">
+                                <h4>Вау-ассортимент</h4>
+                                <p>4676 видов срезанных цветов и около 100 видов растений в горшках.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about_us__text2">
+                        <div class="about_us__warehouse">
+                            <img src="assets/img/about_us/about_us3.svg" alt="о нас">
+                            <div class="about_us_info">
+                                <h4>Склад-шоурум</h4>
+                                <p>Необычное словосочетание, не правда ли? Согласны, а ведь ещё это место, куда можно
+                                    приехать в
+                                    любой
+                                    день недели, выбрать понравившийся цветок и выпить вкуснейший кофе.</p>
+                            </div>
+                        </div>
+                        <div class="about_us__florists">
+                            <img src="assets/img/about_us/about_us4.svg" alt="о нас">
+                            <div class="about_us_info">
+                                <h4>Флористы — альтруисты</h4>
+                                <p>Если вы еще до сих пор не знаете, кто такой альтруист, есть отличный предлог
+                                    погуглить ;)
+                                    Ведь
+                                    наши
+                                    флористы всегда в курсе последних трендов в создании букетов, всегда учитывают ваши
+                                    пожелания и
+                                    помимо цветка, заворачивают в упаковку еще и частичку своей души :)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tovars" id="catalog">
+        <div class="container">
+
+            <div class="tovars_block">
+                <div class="tovars__tovar">
+
+                    <div class="tovar">
+
+                        <a href="pages/tovar.html">
+                            <div class="tovar__foto">
+                                <img src="assets/img/catalog/tovar1.svg" alt="">
+                            </div>
+                        </a>
+                        <div class="tovar__text">
+                            <h4>Букет Роз Джумилия</h4>
+                            <div class="tovar__price">
+                                <p class="tovar__price__line">845</p>
+                                <p>649 ₽</p>
+                            </div>
+                            <button>в корзину</button>
+                        </div>
+
+                    </div>
+
+                    <div class="tovar">
+
+                        <a href="pages/tovar.html">
+                            <div class="tovar__foto">
+                                <img src="assets/img/catalog/tovar2.svg" alt="">
+                            </div>
+                        </a>
+                        <div class="tovar__text">
+                            <h4>Букет Роз Джумилия</h4>
+                            <div class="tovar__price">
+                                <p class="tovar__price__line">845</p>
+                                <p>649 ₽</p>
+                            </div>
+                            <button>в корзину</button>
+                        </div>
+
+                    </div>
+
+                    <div class="tovar">
+
+                        <a href="pages/tovar.html">
+                            <div class="tovar__foto">
+                                <img src="assets/img/catalog/tovar3.svg" alt="">
+                            </div>
+                        </a>
+                        <div class="tovar__text">
+                            <h4>Букет Роз Джумилия</h4>
+                            <div class="tovar__price">
+                                <p class="tovar__price__line">845</p>
+                                <p>649 ₽</p>
+                            </div>
+                            <button>в корзину</button>
+                        </div>
+
+                    </div>
+
+                    <div class="tovar">
+
+                        <a href="pages/tovar.html">
+                            <div class="tovar__foto">
+                                <img src="assets/img/catalog/tovar4.svg" alt="">
+                            </div>
+                        </a>
+                        <div class="tovar__text">
+                            <h4>Букет Роз Джумилия</h4>
+                            <div class="tovar__price">
+                                <p class="tovar__price__line">845</p>
+                                <p>649 ₽</p>
+                            </div>
+                            <button>в корзину</button>
+                        </div>
+
+                    </div>
+
+                    <div class="tovar">
+
+                        <a href="pages/tovar.html">
+                            <div class="tovar__foto">
+                                <img src="assets/img/catalog/tovar5.svg" alt="">
+                            </div>
+                        </a>
+                        <div class="tovar__text">
+                            <h4>Букет Роз Джумилия</h4>
+                            <div class="tovar__price">
+                                <p class="tovar__price__line">845</p>
+                                <p>649 ₽</p>
+                            </div>
+                            <button>в корзину</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tovars__tovar">
+
+                    <div class="tovar">
+
+                        <a href="pages/tovar.html">
+                            <div class="tovar__foto">
+                                <img src="assets/img/catalog/tovar1.svg" alt="">
+                            </div>
+                        </a>
+                        <div class="tovar__text">
+                            <h4>Букет Роз Джумилия</h4>
+                            <div class="tovar__price">
+                                <p class="tovar__price__line">845</p>
+                                <p>649 ₽</p>
+                            </div>
+                            <button>в корзину</button>
+                        </div>
+
+                    </div>
+
+                    <div class="tovar">
+
+                        <a href="pages/tovar.html">
+                            <div class="tovar__foto">
+                                <img src="assets/img/catalog/tovar2.svg" alt="">
+                            </div>
+                        </a>
+                        <div class="tovar__text">
+                            <h4>Букет Роз Джумилия</h4>
+                            <div class="tovar__price">
+                                <p class="tovar__price__line">845</p>
+                                <p>649 ₽</p>
+                            </div>
+                            <button>в корзину</button>
+                        </div>
+
+                    </div>
+
+                    <div class="tovar">
+
+                        <a href="pages/tovar.html">
+                            <div class="tovar__foto">
+                                <img src="assets/img/catalog/tovar3.svg" alt="">
+                            </div>
+                        </a>
+                        <div class="tovar__text">
+                            <h4>Букет Роз Джумилия</h4>
+                            <div class="tovar__price">
+                                <p class="tovar__price__line">845</p>
+                                <p>649 ₽</p>
+                            </div>
+                            <button>в корзину</button>
+                        </div>
+
+                    </div>
+
+                    <div class="tovar">
+
+                        <a href="pages/tovar.html">
+                            <div class="tovar__foto">
+                                <img src="assets/img/catalog/tovar4.svg" alt="">
+                            </div>
+                        </a>
+                        <div class="tovar__text">
+                            <h4>Букет Роз Джумилия</h4>
+                            <div class="tovar__price">
+                                <p class="tovar__price__line">845</p>
+                                <p>649 ₽</p>
+                            </div>
+                            <button>в корзину</button>
+                        </div>
+
+                    </div>
+
+                    <div class="tovar">
+
+                        <a href="pages/tovar.html">
+                            <div class="tovar__foto">
+                                <img src="assets/img/catalog/tovar5.svg" alt="">
+                            </div>
+                        </a>
+                        <div class="tovar__text">
+                            <h4>Букет Роз Джумилия</h4>
+                            <div class="tovar__price">
+                                <p class="tovar__price__line">845</p>
+                                <p>649 ₽</p>
+                            </div>
+                            <button>в корзину</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer">
+                <div class="footer__block">
+                    <h3>Dicentra.ru</h3>
+                    <p>Мы знаем, что дарим не просто<br>цветы, а вашу любовь. На самом<br>деле, мы передаем чувства,
+                        когда<br>
+                        собираем и доставляем букет.<br>
+                        Любовь — это поступки. Любовь не<br>передать словами.</p>
+                    <p>© Дицентра 2018 Все права защищены</p>
+                </div>
+
+                <div class="footer__block client">
+                    <h3>Клиентам</h3>
+                    <p>Доставка и оплата</p>
+                    <p>Контакты</p>
+                    <p>Замена и возврат</p>
+                    <p>Акции</p>
+                </div>
+
+                <div class="footer__block">
+                    <h4>Будьте в курсе последних новостей</h4>
+                    <input type="text" name="email" placeholder="email">
+                    <div class="footer__social">
+                        <i class="fa-brands fa-vk" style="color: #f6f3f1;"></i>
+                        <i class="fa-brands fa-telegram" style="color: #f6f3f1;"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- <img src="assets/img/footer/footer.svg" alt=""> -->
+
+    </footer>
+
+</body>
+
+</html>
